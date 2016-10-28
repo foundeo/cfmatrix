@@ -1,4 +1,4 @@
-# CFML Continious Integration
+# CFML Continious Integration Matrix Runner
 
 This repository provides an easy way to test your CFML code on one or more CFML engines using *CommandBox*
 
@@ -16,4 +16,4 @@ If you are using Travis CI simply copy the `.travis.xml` file from this reposito
 
 ## What does the output look like?
 
-[![Build Status](https://travis-ci.org/foundeo/cfml-ci.svg?branch=master)](https://travis-ci.org/foundeo/cfml-ci)
+[![Build Status](https://travis-ci.org/foundeo/cfmatrix.svg?branch=master)](https://travis-ci.org/foundeo/cfmatrix)

@@ -13,10 +13,10 @@ env:
     - CFENGINE=adobe@2016
     - CFENGINE=adobe@9
 before_install:
-- git clone https://github.com/foundeo/cfml-ci.git cfml-ci
+- git clone https://github.com/foundeo/cfmatrix.git cfmatrix
 install:
-- cfml-ci/bin/box recipe recipeFile=cfml-ci/ci.boxr CFENGINE=$CFENGINE
+- cfmatrix/bin/box recipe recipeFile=cfmatrix/ci.boxr CFENGINE=$CFENGINE
 before_script:
-- chmod +x cfml-ci/run.sh
+- chmod +x cfmatrix/run.sh
 script:
-- "./cfml-ci/run.sh"
+- "./cfmatrix/run.sh"
