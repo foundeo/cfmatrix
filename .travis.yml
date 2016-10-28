@@ -19,4 +19,4 @@ install:
 before_script:
 - chmod +x cfml-ci/run.sh
 script:
-- "./test/test.sh"
+- "./cfml-ci/run.sh"
