@@ -1,0 +1,22 @@
+language: java
+sudo: false
+jdk:
+- oraclejdk8
+env:
+  global:
+    - TEST_RUNNER_URI=/test/run.cfm
+  matrix:
+    - CFENGINE=lucee@4.5
+    - CFENGINE=lucee@5
+    - CFENGINE=adobe@10
+    - CFENGINE=adobe@11
+    - CFENGINE=adobe@2016
+    - CFENGINE=adobe@9
+before_install:
+- git clone https://github.com/foundeo/cfml-ci.git cfml-ci
+install:
+- cfml-ci/bin/box recipe recipeFile=cfml-ci/ci.boxr CFENGINE=$CFENGINE
+before_script:
+- chmod +x cfml-ci/run.sh
+script:
+- "./test/test.sh"
