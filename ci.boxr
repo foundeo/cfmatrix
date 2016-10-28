@@ -1,2 +1,2 @@
 install
-server start cfengine=$CFENGINE
+server start cfengine=$CFENGINE port=8123
