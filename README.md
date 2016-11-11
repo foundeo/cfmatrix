@@ -2,6 +2,10 @@
 
 This repository provides an easy way to test your CFML code on one or more CFML engines using *CommandBox*
 
+## Simple Example
+
+Checkout the [cfmatrix-example-pass](https://github.com/foundeo/cfmatrix-example-pass) repository for a very simple example of how you use this.
+
 ## How does it work
 
 The CI script will fire up a CFML engine specified by the `CFENGINE` environment variable matrix in your build script using `box server start cfengine=$CFENGINE` 
@@ -17,3 +21,5 @@ If you are using Travis CI simply copy the `[.travis.xml](https://github.com/fou
 ## What does the output look like?
 
 [![Build Status](https://travis-ci.org/foundeo/cfmatrix.svg?branch=master)](https://travis-ci.org/foundeo/cfmatrix)
+
+Click on the build status to see the test matrix results, you can see the results for each CFML engine that was run.
