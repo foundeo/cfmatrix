@@ -6,7 +6,7 @@ http_code=$(curl -s -o /tmp/result.txt -w '%{http_code}' http://127.0.0.1:8123$T
 echo "Finished with Status: $http_code"
 #output the result
 cat /tmp/result.txt
-if [[ $http_code -eq 200 ]]; then
+if [ "$http_code" -eq 200 ]; then
     exit 0
 fi
 
