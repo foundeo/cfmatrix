@@ -6,7 +6,7 @@ env:
   global:
     - TEST_RUNNER_URI=/test/run.cfm
   matrix:
-    - CFENGINE=lucee@4.5.3+020
+    - CFENGINE=lucee@4.5
     - CFENGINE=lucee@5.1
     - CFENGINE=adobe@10
     - CFENGINE=adobe@11
