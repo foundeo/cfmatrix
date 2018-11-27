@@ -13,7 +13,7 @@ env:
     - CFENGINE=adobe@2016
     - CFENGINE=adobe@2018
 before_install:
-- git clone https://github.com/foundeo/cfmatrix.git cfmatrix
+- git clone --depth 1 https://github.com/foundeo/cfmatrix.git cfmatrix
 install:
 - cfmatrix/bin/box recipe recipeFile=cfmatrix/ci.boxr CFENGINE=$CFENGINE
 before_script:
