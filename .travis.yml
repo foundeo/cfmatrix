@@ -6,12 +6,12 @@ env:
   global:
     - TEST_RUNNER_URI=/test/run.cfm
   matrix:
-    - CFENGINE=lucee@4.5.3
-    - CFENGINE=lucee@5.1
+    - CFENGINE=lucee@4.5
+    - CFENGINE=lucee@5
     - CFENGINE=adobe@10
     - CFENGINE=adobe@11
     - CFENGINE=adobe@2016
-    - CFENGINE=adobe@9
+    - CFENGINE=adobe@2018
 before_install:
 - git clone https://github.com/foundeo/cfmatrix.git cfmatrix
 install:
