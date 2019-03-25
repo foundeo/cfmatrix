@@ -4,19 +4,18 @@ variables:
   TEST_RUNNER_URI: "/run-test.cfm"
 
 before_script:
-  - git clone https://github.com/foundeo/cfmatrix.git cfmatrix
-  - chmod +x cfmatrix/run.sh
-  - cfmatrix/bin/box recipe recipeFile=cfmatrix/ci.boxr CFENGINE=$CFENGINE
-
+  - git clone --depth 1 https://github.com/foundeo/cfmatrix.git cfmatrix
+  - bash cfmatrix/install.sh
+  
 #add a pipeline for each CFENGINE you want to test
-lucee45: 
+lucee5: 
   variables:
     CFENGINE: ""
   script:
-    - cfmatrix/run.sh
+    - bash cfmatrix/run.sh
 
 cf11:
   variables:
     CFENGINE: "adobe@11"
   script:
-    - cfmatrix/run.sh
+    - bash cfmatrix/run.sh
