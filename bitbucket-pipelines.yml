@@ -1,0 +1,16 @@
+image: openjdk:8
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - commandbox
+          - cache
+        script: 
+          - test -e ~/cfmatrix/install.sh || git clone --depth 1 https://github.com/foundeo/cfmatrix.git ~/cfmatrix
+          - bash ~/cfmatrix/install.sh
+          - bash ~/cfmatrix/run.sh
+definitions:
+  caches:
+    commandbox: ~/.CommandBox/
+    cfmatrix: ~/cfmatrix/
