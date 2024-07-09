@@ -2,7 +2,8 @@
 
 #install commandbox 
 curl -SL -o box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
-unzip box.zip cfmatrix/bin && rm -v box.zip
+ls -lah | grep box.zip
+unzip box.zip -d cfmatrix/bin/ && rm -v box.zip
 
 #run the recipie
 cfmatrix/bin/box recipe recipeFile=cfmatrix/ci.boxr CFENGINE=$CFENGINE
