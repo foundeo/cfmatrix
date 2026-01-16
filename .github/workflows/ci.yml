@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Clone cfmatrix
-        run: cp -r . cfmatrix
+        run: ln -s "$PWD" cfmatrix
         #run: git clone --depth 1 https://github.com/foundeo/cfmatrix.git cfmatrix
 
       - name: Install cfmatrix
