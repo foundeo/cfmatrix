@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  TEST_RUNNER_URI: /tests/run.cfm?reporter=text
+  TEST_RUNNER_URI: /test/run.cfm?reporter=text
 
 jobs:
   
