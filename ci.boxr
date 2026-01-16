@@ -1,3 +1,3 @@
 version
 install
-server start cfengine=$CFENGINE port=8123 JVMArgs="-Djava.security.egd=file:/dev/./urandom" openbrowser=false
+server start cfengine=$CFENGINE port=8123 JVMArgs="-Djava.security.egd=file:/dev/./urandom" openbrowser=false javaVersion=$JAVAVERSION
